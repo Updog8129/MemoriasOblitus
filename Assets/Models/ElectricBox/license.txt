@@ -1,0 +1,11 @@
+Model Information:
+* title:	Distribution_Box
+* source:	https://sketchfab.com/3d-models/distribution-box-18b306c360d24cac9f5cbbfe96cfed41
+* author:	ESs_3D (https://sketchfab.com/SplashKid)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Distribution_Box" (https://sketchfab.com/3d-models/distribution-box-18b306c360d24cac9f5cbbfe96cfed41) by ESs_3D (https://sketchfab.com/SplashKid) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
