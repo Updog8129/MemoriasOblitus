@@ -1,12 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    // Update is called once per frame
-    void LateUpdate()
+    private Transform player;
+
+    void Start()
     {
-        transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        // Find the player object by tag, assuming your player object has the tag "Player"
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (player == null)
+        {
+            Debug.LogError("Player object not found! Make sure to tag your player object with 'Player'.");
+        }
+    }
+
+    void Update()
+    {
+        if (player != null)
+        {
+            // Rotate towards the player's position
+            transform.LookAt(player.position);
+        }
     }
 }
