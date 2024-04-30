@@ -90,6 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34760907ae49e84dbf77858e4ab0f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastDistance: 10
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  bulletDestroyTag: BulletDestroy
+  loaded: 0
 --- !u!1 &2889526037734543789
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,9 +171,8 @@ GameObject:
   - component: {fileID: 8347209849614154153}
   - component: {fileID: 1697618997727852083}
   - component: {fileID: 2405470127099358753}
-  - component: {fileID: 3928304865281034814}
-  - component: {fileID: 4789497569131297582}
-  - component: {fileID: 5907283751810699723}
+  - component: {fileID: 1313293372092322915}
+  - component: {fileID: 7090492356818465408}
   m_Layer: 0
   m_Name: revolver_low_uv_0
   m_TagString: Untagged
@@ -240,7 +245,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3928304865281034814
+--- !u!65 &1313293372092322915
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,54 +260,43 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5873468, y: 0.43297634, z: 1.115327}
-  m_Center: {x: -0.9833774, y: -0.0000002411805, z: 0.54387337}
---- !u!65 &4789497569131297582
-BoxCollider:
+  m_Size: {x: 1.6975695, y: 0.4329757, z: 1.4475908}
+  m_Center: {x: -0.42826483, y: -0.0000000137771226, z: 0.3777408}
+--- !u!114 &7090492356818465408
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6851913113782899980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0585105, y: 0.43297634, z: 1.4475918}
-  m_Center: {x: -0.16561349, y: -0.00000012749625, z: 0.3777408}
---- !u!65 &5907283751810699723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6851913113782899980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.6100292, y: 0.19256547, z: 0.1919398}
-  m_Center: {x: 1.1655447, y: -0.0017332932, z: -0.16857576}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a377ab25056564f48a42eb5c1050d3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEventIn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 587462707469163120}
+        m_TargetAssemblyTypeName: RaycastBulletDestroy, Assembly-CSharp
+        m_MethodName: Loading
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerEventOut:
+    m_PersistentCalls:
+      m_Calls: []
+  IDCheck: 10
 --- !u!1 &6858785125152588849
 GameObject:
   m_ObjectHideFlags: 0

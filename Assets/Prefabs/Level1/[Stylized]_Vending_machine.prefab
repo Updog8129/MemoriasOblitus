@@ -574,6 +574,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3557778868909827874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6943762533194391954}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6943762533194391954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557778868909827874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.5, y: 0, z: 625.0001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2887909606462980435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3869629604258388929
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +639,7 @@ Transform:
   - {fileID: 2109335599435002385}
   - {fileID: 7296876656415086857}
   - {fileID: 6897039835144942475}
+  - {fileID: 6943762533194391954}
   m_Father: {fileID: 7786436430542520063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4454176742543593435
@@ -685,6 +717,7 @@ GameObject:
   - component: {fileID: 7786436430542520063}
   - component: {fileID: 567634601870645079}
   - component: {fileID: 795376346801866755}
+  - component: {fileID: 6422430297790885272}
   m_Layer: 0
   m_Name: vending machine01.fbx
   m_TagString: Untagged
@@ -742,6 +775,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 567634601870645079}
+--- !u!114 &6422430297790885272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110844000581035971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6896eddf6c23014aa8126fba869fa6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3162324916726798790, guid: dfb368f4d1955c5429635aa2bca60f6b, type: 3}
+  spawnPoint: {fileID: 6943762533194391954}
+  launchForce: 10
+  upwardForce: 5
 --- !u!1 &7886826562568903981
 GameObject:
   m_ObjectHideFlags: 0

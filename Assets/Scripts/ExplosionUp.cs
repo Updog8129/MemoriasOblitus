@@ -12,11 +12,6 @@ public class ExplosionUp : MonoBehaviour
     private List<Rigidbody> currentObjects = new();
     private FirstPersonController player = null;
 
-    void Start()
-    {
-        AddForceToObjects();
-    }
-
     public void AddForceToObjects()
     {
         Vector3 currentForce = transform.up * force;

@@ -1,0 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CheckID : MonoBehaviour
+{
+    [SerializeField] public int ID = -1;
+}
