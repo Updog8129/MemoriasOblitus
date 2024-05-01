@@ -5109,8 +5109,8 @@ Transform:
   m_GameObject: {fileID: 6507857765747367675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036, y: 3.0563698, z: -0.0030107498}
-  m_LocalScale: {x: 1.3182, y: 1.0356944, z: 1.3182}
+  m_LocalPosition: {x: -0.03, y: 3.25, z: -0.0030107498}
+  m_LocalScale: {x: 1.3182, y: 1.3363564, z: 1.3182}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6981291289169854700}
@@ -5149,9 +5149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8a245d39449c44aa4b1fbadd851b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 30
+  force: 40
   propulsionDuration: 2
-  delayDuration: 5
+  delayDuration: 3000000
   launchSoda: {fileID: 2310235702970473064}
 --- !u!1 &6956424076566671896
 GameObject:

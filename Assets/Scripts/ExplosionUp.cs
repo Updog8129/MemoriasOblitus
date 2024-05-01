@@ -12,8 +12,14 @@ public class ExplosionUp : MonoBehaviour
     private List<Rigidbody> currentObjects = new();
     private FirstPersonController player = null;
 
+    public void Start()
+    {
+        AddForceToObjects();
+    }
+
     public void AddForceToObjects()
     {
+        Debug.Log("Launch");
         Vector3 currentForce = transform.up * force;
         for(int i = 0; i < currentObjects.Count; i++) 
         {
@@ -31,6 +37,7 @@ public class ExplosionUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject + " has entered");
         Rigidbody rb = other.GetComponent<Rigidbody>();
         if (rb) 
         {

@@ -225,6 +225,7 @@ public class FirstPersonController : MonoBehaviour
     public void ProcessForce(Vector3 force)
     {
         addedForce = force;
+        Debug.Log("Launch");
     }
 
     private void ClearForce() { addedForce = Vector3.zero; }
