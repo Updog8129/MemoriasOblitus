@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LookAt : MonoBehaviour
 {
     private Transform player;
+    public bool loading;
+    public float upAmount = 2f;
 
     void Start()
     {
@@ -20,7 +23,15 @@ public class LookAt : MonoBehaviour
         if (player != null)
         {
             // Rotate towards the player's position
-            transform.LookAt(player.position);
+            if(!loading)
+            {
+                transform.LookAt(new Vector3(player.position.x, player.position.y + upAmount, player.position.z));
+            }
         }
+    }
+
+    public void SetBool(bool setBool)
+    {
+        loading = setBool;
     }
 }

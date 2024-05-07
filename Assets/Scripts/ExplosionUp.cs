@@ -5,7 +5,6 @@ using UnityEngine;
 public class ExplosionUp : MonoBehaviour
 {
     public float force = 2f;  
-    public float propulsionDuration = 2f;
     public float delayDuration = 4f;
 
     [SerializeField] private ParticleSystem launchSoda;
@@ -14,6 +13,7 @@ public class ExplosionUp : MonoBehaviour
 
     public void Start()
     {
+        delayDuration = delayDuration * Time.deltaTime;
         AddForceToObjects();
     }
 

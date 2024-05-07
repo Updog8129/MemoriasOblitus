@@ -5149,9 +5149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8a245d39449c44aa4b1fbadd851b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 40
-  propulsionDuration: 2
-  delayDuration: 3000000
+  force: 700
+  delayDuration: 175
   launchSoda: {fileID: 2310235702970473064}
 --- !u!1 &6956424076566671896
 GameObject:

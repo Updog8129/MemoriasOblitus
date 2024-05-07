@@ -7,17 +7,17 @@ public class FireGun : MonoBehaviour
     [SerializeField] private float delaySpeed = 2f;
     [SerializeField] private GameObject prefabBullet;
     [SerializeField] private Transform bulletSpawn;
+
+    private Quaternion bulletRotation;
+
     void Start()
     {
-        Invoke("SpawnBullet", delaySpeed);
+        InvokeRepeating("SpawnBullet", delaySpeed, delaySpeed);
     }
 
     public void SpawnBullet()
     {
-        Quaternion bulletPoint = Quaternion.identity;
-        bulletPoint.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x + 90, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
-
-        Instantiate(prefabBullet, bulletSpawn.position, bulletPoint);
-        Invoke("SpawnBullet", delaySpeed);
+        bulletRotation = Quaternion.LookRotation(bulletSpawn.forward);
+        Instantiate(prefabBullet, bulletSpawn.position, bulletRotation);
     }
 }

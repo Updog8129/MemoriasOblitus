@@ -21,7 +21,7 @@ public class BulletFire : MonoBehaviour
 
     void FixedUpdate() 
     { 
-        transform.Translate(transform.forward * propulsionForce * Time.deltaTime);
+        transform.Translate(transform.right * propulsionForce * Time.deltaTime);
         
     }
 
